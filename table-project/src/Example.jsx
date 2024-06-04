@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState, useCallback } from "react";
+import { useMemo, useEffect, useState } from "react";
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -7,9 +7,7 @@ import axios from "axios";
 
 const Example = () => {
   const [data, setData] = useState([]);
-  const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isRefetching, setIsRefetching] = useState(false);
   const [rowCount, setRowCount] = useState(0);
 
   const [pagination, setPagination] = useState({
@@ -45,11 +43,9 @@ const Example = () => {
         setData(mappedData);
         setRowCount(response.data.total_results);
       } catch (error) {
-        setIsError(true);
         console.error(error);
       } finally {
         setIsLoading(false);
-        setIsRefetching(false);
       }
     };
     fetchData();
