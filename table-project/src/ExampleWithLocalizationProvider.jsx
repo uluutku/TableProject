@@ -34,10 +34,11 @@ const Example = () => {
           "https://api.themoviedb.org/3/discover/movie",
           {
             headers: {
-              Authorization: "Bearer YOUR_ACCESS_TOKEN",
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZGEyOGY3OTU4NzkxMjM3ZjFhMGVjNDdiOWIwZjdiOSIsInN1YiI6IjY1ZTI2ZTY0NDFhNTYxMDE2MzgzNjFkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YDvypbDVCGeALh3rx1d_oe4p4N0FPYqqed8sDm6LGVU",
             },
             params: {
-              api_key: "YOUR_API_KEY",
+              api_key: "4da28f7958791237f1a0ec47b9b0f7b9",
               page: pagination.pageIndex + 1,
               pageSize: pagination.pageSize,
             },
